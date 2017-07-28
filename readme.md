@@ -2,6 +2,12 @@
 
 + This is simple CRUD app made with Laravel 5.x & Vue 2.x where one can submit Resumè etc, give me a star :star: if you like it :beers:
 
+### :white_check_mark: `git clone` it :octocat: 
+```bash
+$ git clone https://github.com/vinayakkulkarni/jobify.git
+$ cd jobify
+```
+
 ### :white_check_mark: Backend Setup :ok_hand:
 ```bash
 $ composer install
