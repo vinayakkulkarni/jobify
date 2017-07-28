@@ -1,22 +1,45 @@
+require('./vendor');
+require('./app/semantic-ui-tablesort');
+require('./app/custom');
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+// Making NProgress available globally.
+window.NProgress = require('nprogress');
+NProgress.configure({ showSpinner: false, trickleSpeed: 1000, easing: 'ease', speed: 500, minimum: 0.3 });
 
-require('./bootstrap');
+// Vue Router - https://github.com/vuejs/vue-router
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
 
-window.Vue = require('vue');
+// Vue Sweet alert - https://github.com/lishengzxc/vue-sweetalert
+import VueSweetAlert from 'vue-sweetalert';
+Vue.use(VueSweetAlert);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+// Toast Notification - https://github.com/shakee93/vue-toasted
+import Toasted from 'vue-toasted';
+Vue.use(Toasted, {position: 'bottom-right', duration: 3000});
 
-Vue.component('example', require('./components/Example.vue'));
-
-const app = new Vue({
-    el: '#app'
+// Register a global custom directive called v-tablesort
+Vue.directive('tablesort', {
+  inserted: function (el) {
+    $(el).tablesort();
+  }
 });
+
+// Register a global custom directive called v-dropdown
+Vue.directive('dropdown', {
+  inserted: function (el) {
+    $(el).dropdown();
+  }
+});
+
+import router from './routes';
+
+// Load the component where id = 'app'
+window.onload = () => {
+  if (document.getElementById("app")) {
+  	var app = new Vue({
+  	    el: '#app',
+        router
+  	});
+  }
+}
