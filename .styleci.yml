@@ -1,0 +1,9 @@
+preset: laravel
+
+finder:
+  exclude:
+    - "tests"
+    - "node_modules"
+    - "storage"
+    - "vendor"
+    - "bower_components"
