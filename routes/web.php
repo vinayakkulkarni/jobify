@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('jobs/{any?}', 'JobsController@index')->name('jobs')->where('any', '.*');
+
+Auth::routes();
+
+Route::get('applications/{any?}', 'ApplicationsController@index')->name('applications')->where('any', '.*');

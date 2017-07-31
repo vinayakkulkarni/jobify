@@ -16,3 +16,17 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::group(
+    [
+        'prefix' => 'v1',
+        'as' => 'api.',
+        'namespace' => 'Api',
+        'middleware' => ['auth.basic'],
+    ],
+    function () {
+        Route::post('jobs/{id}/apply', 'ApplicationsController@store')->name('applyForJob');
+        Route::post('applications/{id}', 'ApplicationsController@rating')->name('rateApplication');
+        Route::resource('applications', 'ApplicationsController', ['parameters' => ['applications' => 'id']], ['only' => ['index', 'show']]);
+		Route::resource('jobs', 'JobsController', ['parameters' => ['jobs' => 'id']]);
+	}
+);
