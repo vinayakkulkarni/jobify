@@ -14,7 +14,7 @@
     <div class="ui grid inverted container">
       <div class="ten wide left aligned column" style="min-height: 65px;">
         <div class="ui item big breadcrumb" style="margin-top:8px;">
-          <span v-for="(breadcrumb, index) in breadcrumbs" v-if="breadcrumbs.length != index + 1">
+          <span v-for="(breadcrumb, index) in breadcrumbs" :key="index" v-if="breadcrumbs.length != index + 1">
             <router-link class="section" :to="{ name : breadcrumb.url }" tag="a" exact><i :class="icon" v-if="index == 0"></i> {{ breadcrumb.name }}</router-link>
             <span class="divider">/</span>
           </span>
