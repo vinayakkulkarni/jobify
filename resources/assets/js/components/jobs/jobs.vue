@@ -61,7 +61,7 @@
       <h3 class="ui horizontal divider header">
         Listings
       </h3>
-      <div class="ui four stackable cards" style="padding-top:10px;" v-if="jobs.length > 0">
+      <div class="ui four stackable raised cards" style="padding-top:10px;" v-if="jobs.length > 0">
         <div class="card" v-for="(job, index) in jobs" :key="job.id">
           <div class="content">
             <div class="header">
