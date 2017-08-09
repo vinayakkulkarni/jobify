@@ -18,7 +18,7 @@
     "laravel-mix": "^1.0",
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
-    "semantic-ui": "2.2.10",
+    "semantic-ui": "^2.2.13",
     "uuid": "^3.0.1",
     "vue": "^2.1.10"
   },
