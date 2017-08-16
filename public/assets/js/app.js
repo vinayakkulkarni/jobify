@@ -46,9 +46,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1314,13 +1311,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "content"
   }, [_c('h4', {
     staticClass: "header"
-  }, [_vm._v("\n\t\t\t      \t" + _vm._s(_vm.application.name) + " — " + _vm._s(_vm.application.email) + "\n\t\t\t      ")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(_vm.application.name) + " — " + _vm._s(_vm.application.email) + "\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "description"
-  }, [_vm._v("\n\t\t\t        " + _vm._s(_vm.application.web_address) + "\n\t\t\t      ")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(_vm.application.web_address) + "\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "extra"
-  }, [_vm._v("\n\t\t\t        Cover: " + _vm._s(_vm.application.cover) + "\n\t\t\t      ")]), _vm._v(" "), _c('h4', {
+  }, [_vm._v("\n\t\t\t\t\t\t\tCover: " + _vm._s(_vm.application.cover) + "\n\t\t\t\t\t\t")]), _vm._v(" "), _c('h4', {
     staticClass: "header"
-  }, [_vm._v("\n\t\t\t      \tResume — " + _vm._s(_vm.application.resume) + "\n\t\t\t      \t"), _c('rating', {
+  }, [_vm._v("\n\t\t\t\t\t\t\tResume — " + _vm._s(_vm.application.resume) + "\n\t\t\t\t\t\t\t"), _c('rating', {
     attrs: {
       "disabled": _vm.disableRating
     },
@@ -1371,7 +1368,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "margin-top": "8px"
     }
   }, _vm._l((_vm.breadcrumbs), function(breadcrumb, index) {
-    return (_vm.breadcrumbs.length != index + 1) ? _c('span', [_c('router-link', {
+    return (_vm.breadcrumbs.length != index + 1) ? _c('span', {
+      key: index
+    }, [_c('router-link', {
       staticClass: "section",
       attrs: {
         "to": {
@@ -1594,7 +1593,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _vm._m(6)])])])]), _vm._v(" "), _c('h3', {
     staticClass: "ui horizontal divider header"
   }, [_vm._v("\n        Listings\n      ")]), _vm._v(" "), (_vm.jobs.length > 0) ? _c('div', {
-    staticClass: "ui four stackable cards",
+    staticClass: "ui four stackable raised cards",
     staticStyle: {
       "padding-top": "10px"
     }
