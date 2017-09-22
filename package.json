@@ -10,12 +10,12 @@
   "devDependencies": {
     "axios": "^0.16.2",
     "cross-env": "^5.0.1",
-    "eslint": "^4.6.1",
+    "eslint": "^4.7.2",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
     "gulp": "^3.9.1",
     "jquery": "^3.1.1",
-    "laravel-mix": "^1.4.3",
+    "laravel-mix": "^1.4.5",
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
     "semantic-ui": "^2.2.13",
@@ -24,11 +24,11 @@
   },
   "dependencies": {
     "nprogress": "^0.2.0",
-    "sweetalert2": "^6.8.0",
+    "sweetalert2": "^6.9.1",
     "vue-recaptcha": "^0.4.0",
     "vue-router": "^2.7.0",
     "vue-sticky": "^3.3.1",
     "vue-sweetalert": "^0.1.18",
-    "vue-toasted": "^1.1.17"
+    "vue-toasted": "^1.1.18"
   }
 }
