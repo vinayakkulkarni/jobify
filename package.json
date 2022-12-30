@@ -15,7 +15,7 @@
     "eslint-plugin-import": "^2.7.0",
     "gulp": "^3.9.1",
     "jquery": "^3.5.0",
-    "laravel-mix": "^1.4.5",
+    "laravel-mix": "^6.0.49",
     "lodash": "^4.17.19",
     "moment": "^2.17.1",
     "semantic-ui": "^2.2.13",
